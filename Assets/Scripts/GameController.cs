@@ -5,10 +5,13 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public GameObject obstacle;
+    public GameObject potato;
     public GameObject istructionsPanel;
     public AudioSource backgroundAudioSource;
-    float spawnRate = 3f;
-    float spawnTimer;
+    float obstacleSpawnRate = 1.7f;
+    float potatoSpawnRate = 3f;
+    float obstacleSpawnTimer;
+    float potatoSpawnTimer;
     bool startedGame = false;
 
     void Start()
@@ -26,12 +29,21 @@ public class GameController : MonoBehaviour
             startedGame = true;
         }
 
-        spawnTimer += Time.deltaTime;
-        if(spawnTimer >= spawnRate)
+        obstacleSpawnTimer += Time.deltaTime;
+        potatoSpawnTimer += Time.deltaTime;
+
+        if(obstacleSpawnTimer >= obstacleSpawnRate)
         {
-            spawnTimer -= spawnRate;
+            obstacleSpawnTimer -= obstacleSpawnRate;
             Vector2 obstaclePostion = new Vector2(Random.Range(10f, 15f), -2.082564f);
             Instantiate(obstacle, obstaclePostion, Quaternion.identity);
+        }
+
+        if (potatoSpawnTimer >= potatoSpawnRate)
+        {
+            potatoSpawnTimer -= potatoSpawnRate;
+            Vector2 obstaclePostion = new Vector2(Random.Range(10f, 15f), 0.50f);
+            Instantiate(potato, obstaclePostion, Quaternion.identity);
         }
     }
 }

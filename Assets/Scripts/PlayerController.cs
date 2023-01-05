@@ -14,8 +14,12 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public GameObject gameController;
     public GameObject gameOverPanel;
+    public GameObject doubleJumpPanel;
     public GameObject scorePanel;
+    public Text doubleJumpText;
     public Text gameOverScoreText;
+    bool doubleJump = true;
+    float doubleJumpTimer = 0f;
 
     private void Start()
     {
@@ -38,11 +42,31 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if(!doubleJump)
+        {
+            doubleJumpTimer += Time.deltaTime;
+        }
+        
         if (Input.GetMouseButtonDown(0) && transform.position.y < -2.2f)
         {
             rb.velocity = new Vector2(0f, 13f);
             jumpAudioSource.Play();
         }
+
+        else if (Input.GetMouseButtonDown(0) && transform.position.y > -2.2f && doubleJump)
+        {
+            rb.velocity = new Vector2(0f, 13f);
+            jumpAudioSource.Play();
+            doubleJump = false;
+        }
+
+        else if(transform.position.y < -2.2f && doubleJumpTimer >= 3f)
+        {
+            doubleJump = true;
+            doubleJumpTimer = 0f;
+        }
+
+        doubleJumpText.text = $"Double Jump: {doubleJump}";
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -51,9 +75,13 @@ public class PlayerController : MonoBehaviour
         {
             backgroundAudioSource.Stop();
             gameOverAudioSource.Play();
+
             Time.timeScale = 0;
+
+            doubleJumpPanel.SetActive(false);
             scorePanel.SetActive(false);
             gameOverPanel.SetActive(true);
+
             gameOverScoreText.text = score.scoreNumber.ToString();
         }
     }

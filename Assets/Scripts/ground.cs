@@ -14,7 +14,7 @@ public class ground : MonoBehaviour
     {
         if(transform.position.x > -1.19f)
         {
-            transform.position = new Vector2(transform.position.x - 3f * Time.deltaTime,
+            transform.position = new Vector2(transform.position.x - 8f * Time.deltaTime,
                 transform.position.y);
         }
         else

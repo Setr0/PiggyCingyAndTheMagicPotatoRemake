@@ -12,7 +12,7 @@ public class obstacle : MonoBehaviour
     {
         if(transform.position.x > -10.14f)
         {
-            transform.position = new Vector2(transform.position.x - 3f * Time.deltaTime, transform.position.y);
+            transform.position = new Vector2(transform.position.x - 8f * Time.deltaTime, transform.position.y);
         }
         else
         {
