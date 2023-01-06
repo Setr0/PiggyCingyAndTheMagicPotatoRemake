@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
             scorePanel.SetActive(false);
             gameOverPanel.SetActive(true);
 
-            gameOverScoreText.text = score.scoreNumber.ToString();
+            gameOverScoreText.text = Score.scoreNumber.ToString();
         }
     }
 }

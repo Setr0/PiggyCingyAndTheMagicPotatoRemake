@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class factory : MonoBehaviour
+public class Factory : MonoBehaviour
 {
     void Update()
     {

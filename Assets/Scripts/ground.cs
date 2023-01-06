@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ground : MonoBehaviour
+public class Ground : MonoBehaviour
 {
     Vector2 startPosition;
     void Start()
@@ -12,7 +12,7 @@ public class ground : MonoBehaviour
 
     void Update()
     {
-        if(transform.position.x > -1.19f)
+        if(transform.position.x >= -2.40f)
         {
             transform.position = new Vector2(transform.position.x - 8f * Time.deltaTime,
                 transform.position.y);

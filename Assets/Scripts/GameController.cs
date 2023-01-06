@@ -42,7 +42,7 @@ public class GameController : MonoBehaviour
         if (potatoSpawnTimer >= potatoSpawnRate)
         {
             potatoSpawnTimer -= potatoSpawnRate;
-            Vector2 obstaclePostion = new Vector2(Random.Range(10f, 15f), 0.50f);
+            Vector2 obstaclePostion = new Vector2(Random.Range(10f, 15f), Random.Range(-2.6f, -0.02f));
             Instantiate(potato, obstaclePostion, Quaternion.identity);
         }
     }

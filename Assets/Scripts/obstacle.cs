@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class obstacle : MonoBehaviour
+public class Obstacle : MonoBehaviour
 {
     bool passed = false;
     public AudioSource audioSource;
@@ -21,7 +21,7 @@ public class obstacle : MonoBehaviour
 
         if(!passed && transform.position.x < -6.70f)
         {
-            score.scoreNumber += 1;
+            Score.scoreNumber += 1;
             audioSource.Play();
             passed = true;
         }
