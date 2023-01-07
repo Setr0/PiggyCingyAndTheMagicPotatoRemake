@@ -7,9 +7,9 @@ public class Potato : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.x > -10.14f)
+        if (transform.position.x > -12.6f)
         {
-            transform.position = new Vector2(transform.position.x - 16f * Time.deltaTime, transform.position.y);
+            transform.position = new Vector2(transform.position.x - 23f * Time.deltaTime, transform.position.y);
         }
         else
         {

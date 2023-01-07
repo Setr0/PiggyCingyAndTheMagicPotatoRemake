@@ -5,6 +5,7 @@ using UnityEngine;
 public class Ground : MonoBehaviour
 {
     Vector2 startPosition;
+    public static bool started = true;
     void Start()
     {
         startPosition = transform.position;
@@ -12,13 +13,15 @@ public class Ground : MonoBehaviour
 
     void Update()
     {
-        if(transform.position.x >= -2.40f)
+        if(transform.position.x >= -15.39f)
         {
-            transform.position = new Vector2(transform.position.x - 8f * Time.deltaTime,
+            started = false;
+            transform.position = new Vector2(transform.position.x - 15f * Time.deltaTime,
                 transform.position.y);
         }
         else
         {
+            started = true;
             transform.position = startPosition;
         }
     }

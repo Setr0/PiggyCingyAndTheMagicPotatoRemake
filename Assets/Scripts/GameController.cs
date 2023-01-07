@@ -32,17 +32,17 @@ public class GameController : MonoBehaviour
         obstacleSpawnTimer += Time.deltaTime;
         potatoSpawnTimer += Time.deltaTime;
 
-        if(obstacleSpawnTimer >= obstacleSpawnRate)
+        if(Ground.started)
         {
             obstacleSpawnTimer -= obstacleSpawnRate;
-            Vector2 obstaclePostion = new Vector2(Random.Range(10f, 15f), -2.082564f);
+            Vector2 obstaclePostion = new Vector2(Random.Range(13f, 22f), -2.082564f);
             Instantiate(obstacle, obstaclePostion, Quaternion.identity);
         }
 
         if (potatoSpawnTimer >= potatoSpawnRate)
         {
             potatoSpawnTimer -= potatoSpawnRate;
-            Vector2 obstaclePostion = new Vector2(Random.Range(10f, 15f), Random.Range(-2.6f, -0.02f));
+            Vector2 obstaclePostion = new Vector2(Random.Range(13f, 18f), Random.Range(-2.6f, -0.02f));
             Instantiate(potato, obstaclePostion, Quaternion.identity);
         }
     }

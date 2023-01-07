@@ -10,9 +10,10 @@ public class Obstacle : MonoBehaviour
     public AudioSource audioSource;
     void Update()
     {
-        if(transform.position.x > -10.14f)
+        if(transform.position.x >= -12.6f)
         {
-            transform.position = new Vector2(transform.position.x - 8f * Time.deltaTime, transform.position.y);
+            transform.position = new Vector2(transform.position.x - 15f * Time.deltaTime,
+                transform.position.y);
         }
         else
         {
