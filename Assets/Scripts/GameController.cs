@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
     public GameObject potato;
     public GameObject istructionsPanel;
     public AudioSource backgroundAudioSource;
-    float obstacleSpawnRate = 1.7f;
+    float obstacleSpawnRate = 1.5f;
     float potatoSpawnRate = 3f;
     float obstacleSpawnTimer;
     float potatoSpawnTimer;

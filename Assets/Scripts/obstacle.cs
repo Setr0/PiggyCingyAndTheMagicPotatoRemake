@@ -20,11 +20,11 @@ public class Obstacle : MonoBehaviour
             Destroy(gameObject);
         }    
 
-        if(!passed && transform.position.x < -6.70f)
+        if(!passed && transform.position.x < -7.5f)
         {
+            passed = true;
             Score.scoreNumber += 1;
             audioSource.Play();
-            passed = true;
         }
     }
 }
