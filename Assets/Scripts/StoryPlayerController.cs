@@ -15,6 +15,8 @@ public class StoryPlayerController : MonoBehaviour
     public Animator animator;
     public Sprite[] spriteArray;
     public RuntimeAnimatorController[] animatorControllerArray;
+    public AudioSource backgroundSound;
+    public AudioSource gameoverSound;
     public Text gameoverScoreText;
 
     void Start()
@@ -63,6 +65,8 @@ public class StoryPlayerController : MonoBehaviour
     {
         if(collision.gameObject.tag == "obstacle")
         {
+            gameoverSound.Play();
+            backgroundSound.Stop();
             Time.timeScale = 0;
             scorePanel.SetActive(false);
             commandsPanel.SetActive(false);

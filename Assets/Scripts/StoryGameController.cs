@@ -21,6 +21,7 @@ public class StoryGameController : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0) && !startedGame)
         {
+            GetComponent<AudioSource>().Play();
             istructionsPanel.SetActive(false);
             Time.timeScale = 1;
             startedGame = true;
