@@ -316,6 +316,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02e0ad4499b828b4da5ab48ac2e3385c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cinemachineCamera: {fileID: 705716538}
+  gameoverPanel: {fileID: 618791211}
+  scorePanel: {fileID: 1885867298}
+  commandsPanel: {fileID: 566725886}
+  gameoverScoreText: {fileID: 1394374684}
 --- !u!50 &347093754
 Rigidbody2D:
   serializedVersion: 4
@@ -664,6 +669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   istructionsPanel: {fileID: 275538617}
+  rocks: {fileID: 9070118491869402366, guid: 8686b8b8a87f7904c8227beabdc46932, type: 3}
 --- !u!4 &458063401
 Transform:
   m_ObjectHideFlags: 0
@@ -2042,8 +2048,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -5}
-  m_SizeDelta: {x: 43.04, y: 37.76}
+  m_AnchoredPosition: {x: 0.635, y: -0.0000023842}
+  m_SizeDelta: {x: 198.73, y: 37.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1394374684
 MonoBehaviour:
@@ -2968,7 +2974,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class StoryScore : MonoBehaviour
 {
     Text scoreText;
-    int score;
+    public static int score;
     void Start()
     {
         scoreText = GetComponent<Text>();
@@ -14,7 +14,7 @@ public class StoryScore : MonoBehaviour
 
     void Update()
     {
-        if (StoryGameController.gameReady)
+        if (StoryGameController.gameReady && Time.timeScale != 0)
         {
             score++;
             scoreText.text = score.ToString();
