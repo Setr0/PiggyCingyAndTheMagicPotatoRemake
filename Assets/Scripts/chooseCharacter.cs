@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class chooseCharacter : MonoBehaviour
+public class ChooseCharacter : MonoBehaviour
 {
     public static String character;
     public void loadGame(int scene)
