@@ -1,19 +1,20 @@
+using Cinemachine;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class StoryPlayerController : MonoBehaviour
 {
-    public static void moveLeft(Rigidbody2D rb)
+    void Update()
     {
-        rb.velocity = new Vector2(-2f, 0f);
-    }
-
-    public static void moveRight(Rigidbody2D rb)
-    {
-        rb.velocity = new Vector2(2f, 0f);
-    }
-
-    public static void stop(Rigidbody2D rb)
-    {
-        rb.velocity = new Vector2(0f, 0f);
+        if (transform.position.y > -17.77f)
+        {
+            transform.position = new Vector2(transform.position.x,
+            transform.position.y - 3f * Time.deltaTime);
+        }
+        else
+        {
+            StoryGameController.gameReady = true;
+        }
     }
 }
