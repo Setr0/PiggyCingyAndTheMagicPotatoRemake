@@ -10,6 +10,7 @@ public class StoryScore : MonoBehaviour
     void Start()
     {
         scoreText = GetComponent<Text>();
+        score = 0;
     }
 
     void Update()
