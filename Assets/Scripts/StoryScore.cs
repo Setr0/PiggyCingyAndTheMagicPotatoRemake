@@ -15,7 +15,7 @@ public class StoryScore : MonoBehaviour
 
     void Update()
     {
-        if (StoryGameController.gameReady && Time.timeScale != 0)
+        if (StoryGameController.gameReady && Time.timeScale != 0 && !StoryGameController.reachedScore)
         {
             score++;
             scoreText.text = score.ToString();

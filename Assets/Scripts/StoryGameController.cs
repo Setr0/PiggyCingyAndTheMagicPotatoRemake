@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StoryGameController : MonoBehaviour
@@ -8,6 +6,7 @@ public class StoryGameController : MonoBehaviour
     public GameObject rocks;
     public static bool gameReady = false;
     public static bool startedGame = false;
+    public static bool reachedScore = false;
     float spawnTimer;
     float spawnRate = 1f;
 
@@ -15,6 +14,8 @@ public class StoryGameController : MonoBehaviour
     {
         Time.timeScale = 0;
         startedGame = false;
+        gameReady = false;
+        reachedScore = false;
     }
 
     void Update()
@@ -27,7 +28,7 @@ public class StoryGameController : MonoBehaviour
             startedGame = true;
         }
 
-        if(gameReady)
+        if(gameReady && !StoryGameController.reachedScore)
         {
             spawnTimer += Time.deltaTime;
             if (spawnTimer >= spawnRate)

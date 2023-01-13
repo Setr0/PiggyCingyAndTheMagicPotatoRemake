@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class StoryPlayerController : MonoBehaviour
 {
+    Rigidbody2D rb;
     public GameObject camera;
     public GameObject cinemachineCamera;
     public GameObject gameoverPanel;
@@ -22,6 +23,7 @@ public class StoryPlayerController : MonoBehaviour
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         if(ChooseCharacter.character == "piggy")
         {
             spriteRender.sprite = spriteArray[0];
@@ -47,27 +49,42 @@ public class StoryPlayerController : MonoBehaviour
             StoryGameController.gameReady = false;
         }
 
-        if(StoryGameController.startedGame && !StoryGameController.gameReady)
+        if(StoryGameController.startedGame && !StoryGameController.gameReady && !StoryGameController.reachedScore)
         {
             if (transform.position.y > -10.34f)
             {
                 transform.position = new Vector2(transform.position.x,
                 transform.position.y - 3f * Time.deltaTime);
-
-                // -24.14
             }
             else
             {
-                //camera.transform.position = new Vector3(transform.position.x,
-                //    -19.7f,
-                //    -1f);
                 cinemachineCamera.SetActive(false);
                 StoryGameController.gameReady = true;
             }
         }
 
+        if(StoryScore.score >= 10000)
+        {
+            StoryGameController.reachedScore = true;
+        }
+
+        if (StoryGameController.reachedScore)
+        {
+            cinemachineCamera.SetActive(true);
+            if (transform.position.y > -23.75f && camera.transform.position.y >= -23.75f)
+            {
+                transform.position = new Vector2(transform.position.x,
+                transform.position.y - 3f * Time.deltaTime);
+            }
+            else
+            {
+                cinemachineCamera.SetActive(false);
+                rb.gravityScale = 3.0f;
+            }
+        }
+
         #if UNITY_EDITOR
-                GetComponent<Rigidbody2D>().velocity = new Vector2(Input.GetAxis("Horizontal") * 6f, 0f);
+                rb.velocity = new Vector2(Input.GetAxis("Horizontal") * 6f, rb.velocity.y);
         #endif
     }
 
@@ -82,6 +99,11 @@ public class StoryPlayerController : MonoBehaviour
             commandsPanel.SetActive(false);
             gameoverScoreText.text = StoryScore.score.ToString();
             gameoverPanel.SetActive(true);
+        }
+
+        if (collision.gameObject.tag == "cup")
+        {
+            SceneManager.LoadScene(0);
         }
     }
 }
