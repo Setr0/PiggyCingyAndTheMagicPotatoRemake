@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class StoryPlayerController : MonoBehaviour
 {
+    public GameObject camera;
     public GameObject cinemachineCamera;
     public GameObject gameoverPanel;
     public GameObject scorePanel;
@@ -52,13 +53,22 @@ public class StoryPlayerController : MonoBehaviour
             {
                 transform.position = new Vector2(transform.position.x,
                 transform.position.y - 3f * Time.deltaTime);
+
+                // -24.14
             }
             else
             {
+                //camera.transform.position = new Vector3(transform.position.x,
+                //    -19.7f,
+                //    -1f);
                 cinemachineCamera.SetActive(false);
                 StoryGameController.gameReady = true;
             }
         }
+
+        #if UNITY_EDITOR
+                GetComponent<Rigidbody2D>().velocity = new Vector2(Input.GetAxis("Horizontal") * 6f, 0f);
+        #endif
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5515402539719180421}
   - component: {fileID: 3953068796792994298}
   - component: {fileID: 4917630166578902398}
-  - component: {fileID: 4169509397875025244}
   - component: {fileID: 6919635666126812994}
+  - component: {fileID: 7831208119100084863}
   m_Layer: 0
   m_Name: rock
   m_TagString: obstacle
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184004523064770880}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.45, y: -2.6, z: 73.77966}
+  m_LocalPosition: {x: -8.91, y: -5.69, z: 73.77966}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 5895883678250355408}
@@ -111,32 +111,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.21859026, y: 0.091778755}
   m_EdgeRadius: 0
---- !u!61 &4169509397875025244
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1184004523064770880}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.05442805, y: -0.048671246}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.16718273, y: 0.19335017}
-  m_EdgeRadius: 0
 --- !u!50 &6919635666126812994
 Rigidbody2D:
   serializedVersion: 4
@@ -158,6 +132,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
+--- !u!58 &7831208119100084863
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184004523064770880}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.05, y: -0.05}
+  serializedVersion: 2
+  m_Radius: 0.089
 --- !u!1 &2184039839516220142
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,8 +159,8 @@ GameObject:
   - component: {fileID: 8016329420220026103}
   - component: {fileID: 4770506648550793479}
   - component: {fileID: 1974317975172224467}
-  - component: {fileID: 931364111642266746}
   - component: {fileID: 4345352238835376385}
+  - component: {fileID: 4338016608485423707}
   m_Layer: 0
   m_Name: rock
   m_TagString: obstacle
@@ -186,7 +176,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2184039839516220142}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.08, y: -2.6, z: 73.77966}
+  m_LocalPosition: {x: -5.52, y: -1.89, z: 73.77966}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 5895883678250355408}
@@ -269,32 +259,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.21859026, y: 0.091778755}
   m_EdgeRadius: 0
---- !u!61 &931364111642266746
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2184039839516220142}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.05442805, y: -0.048671246}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.16718273, y: 0.19335017}
-  m_EdgeRadius: 0
 --- !u!50 &4345352238835376385
 Rigidbody2D:
   serializedVersion: 4
@@ -316,6 +280,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
+--- !u!58 &4338016608485423707
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2184039839516220142}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.05, y: -0.05}
+  serializedVersion: 2
+  m_Radius: 0.089
 --- !u!1 &3424233902585222846
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,8 +307,8 @@ GameObject:
   - component: {fileID: 6121073705961387873}
   - component: {fileID: 5357900256280854262}
   - component: {fileID: 742277979463848756}
-  - component: {fileID: 2949661757847415256}
   - component: {fileID: 5110528650844439905}
+  - component: {fileID: 3050388070202941320}
   m_Layer: 0
   m_Name: rock
   m_TagString: obstacle
@@ -344,7 +324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3424233902585222846}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.88, y: -2.6, z: 73.77966}
+  m_LocalPosition: {x: -3.37, y: -5.48, z: 73.77966}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 5895883678250355408}
@@ -427,32 +407,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.21859026, y: 0.091778755}
   m_EdgeRadius: 0
---- !u!61 &2949661757847415256
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3424233902585222846}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.05442805, y: -0.048671246}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.16718273, y: 0.19335017}
-  m_EdgeRadius: 0
 --- !u!50 &5110528650844439905
 Rigidbody2D:
   serializedVersion: 4
@@ -474,6 +428,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
+--- !u!58 &3050388070202941320
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3424233902585222846}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.05, y: -0.05}
+  serializedVersion: 2
+  m_Radius: 0.089
 --- !u!1 &4740104414073806918
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,8 +455,8 @@ GameObject:
   - component: {fileID: 7307115746850083211}
   - component: {fileID: 1675170100247795621}
   - component: {fileID: 1068960292025358368}
-  - component: {fileID: 4164291539792342196}
   - component: {fileID: 3578025476679141242}
+  - component: {fileID: 9122062009976693666}
   m_Layer: 0
   m_Name: rock
   m_TagString: obstacle
@@ -502,7 +472,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4740104414073806918}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.09, y: -2.6, z: 73.77966}
+  m_LocalPosition: {x: 0.31, y: -2.91, z: 73.77966}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 5895883678250355408}
@@ -585,32 +555,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.21859026, y: 0.091778755}
   m_EdgeRadius: 0
---- !u!61 &4164291539792342196
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4740104414073806918}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.05442805, y: -0.048671246}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.16718273, y: 0.19335017}
-  m_EdgeRadius: 0
 --- !u!50 &3578025476679141242
 Rigidbody2D:
   serializedVersion: 4
@@ -632,6 +576,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
+--- !u!58 &9122062009976693666
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4740104414073806918}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.05, y: -0.05}
+  serializedVersion: 2
+  m_Radius: 0.089
 --- !u!1 &7123045861195056018
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,8 +603,8 @@ GameObject:
   - component: {fileID: 353506888532804692}
   - component: {fileID: 6335673370083989920}
   - component: {fileID: 530127696669021327}
-  - component: {fileID: 7240377904425199457}
   - component: {fileID: 1512158247953142806}
+  - component: {fileID: 1953605982982743917}
   m_Layer: 0
   m_Name: rock
   m_TagString: obstacle
@@ -743,32 +703,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.21859026, y: 0.091778755}
   m_EdgeRadius: 0
---- !u!61 &7240377904425199457
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7123045861195056018}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.05442805, y: -0.048671246}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.16718273, y: 0.19335017}
-  m_EdgeRadius: 0
 --- !u!50 &1512158247953142806
 Rigidbody2D:
   serializedVersion: 4
@@ -790,6 +724,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
+--- !u!58 &1953605982982743917
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7123045861195056018}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.05, y: -0.05}
+  serializedVersion: 2
+  m_Radius: 0.089
 --- !u!1 &7171494239325520466
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,8 +751,8 @@ GameObject:
   - component: {fileID: 6380950199707819838}
   - component: {fileID: 5655719040074546575}
   - component: {fileID: 6392295383502895567}
-  - component: {fileID: 3918488229646284046}
   - component: {fileID: 6893143419741324816}
+  - component: {fileID: 4362711983079620558}
   m_Layer: 0
   m_Name: rock
   m_TagString: obstacle
@@ -818,7 +768,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7171494239325520466}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.95, y: -2.6, z: 73.77966}
+  m_LocalPosition: {x: 3.27, y: -5.97, z: 73.77966}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 5895883678250355408}
@@ -901,32 +851,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.21859026, y: 0.091778755}
   m_EdgeRadius: 0
---- !u!61 &3918488229646284046
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7171494239325520466}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.05442805, y: -0.048671246}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.16718273, y: 0.19335017}
-  m_EdgeRadius: 0
 --- !u!50 &6893143419741324816
 Rigidbody2D:
   serializedVersion: 4
@@ -948,6 +872,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
+--- !u!58 &4362711983079620558
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7171494239325520466}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.05, y: -0.05}
+  serializedVersion: 2
+  m_Radius: 0.089
 --- !u!1 &7983627764141523126
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,8 +899,8 @@ GameObject:
   - component: {fileID: 6606635627816434876}
   - component: {fileID: 3373212229084853370}
   - component: {fileID: 6518046237235385002}
-  - component: {fileID: 7599562469634003069}
   - component: {fileID: 3954241029601420528}
+  - component: {fileID: 5082038720659354480}
   m_Layer: 0
   m_Name: rock
   m_TagString: obstacle
@@ -976,7 +916,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7983627764141523126}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.4, y: -2.6, z: 73.77966}
+  m_LocalPosition: {x: 4.3, y: -1.64, z: 73.77966}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 5895883678250355408}
@@ -1059,32 +999,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.21859026, y: 0.091778755}
   m_EdgeRadius: 0
---- !u!61 &7599562469634003069
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7983627764141523126}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.05442805, y: -0.048671246}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.16718273, y: 0.19335017}
-  m_EdgeRadius: 0
 --- !u!50 &3954241029601420528
 Rigidbody2D:
   serializedVersion: 4
@@ -1106,6 +1020,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
+--- !u!58 &5082038720659354480
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7983627764141523126}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.05, y: -0.05}
+  serializedVersion: 2
+  m_Radius: 0.089
 --- !u!1 &9070118491869402366
 GameObject:
   m_ObjectHideFlags: 0

@@ -317,6 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02e0ad4499b828b4da5ab48ac2e3385c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 1347461483}
   cinemachineCamera: {fileID: 705716538}
   gameoverPanel: {fileID: 618791211}
   scorePanel: {fileID: 1885867298}
