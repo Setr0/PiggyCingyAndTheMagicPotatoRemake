@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StoryGameController : MonoBehaviour
 {
     public GameObject istructionsPanel;
     public GameObject rocks;
+    public Button leftButton;
+    public Button rightButton;
     public static bool gameReady = false;
     public static bool startedGame = false;
     public static bool reachedScore = false;
@@ -26,9 +29,21 @@ public class StoryGameController : MonoBehaviour
             istructionsPanel.SetActive(false);
             Time.timeScale = 1;
             startedGame = true;
+
+            Color leftButtonColor = leftButton.GetComponent<Image>().color;
+            leftButtonColor.a = 0f;
+            leftButton.GetComponent<Image>().color = leftButtonColor;
+
+            leftButton.GetComponentInChildren<Text>().gameObject.SetActive(false);
+
+            Color rightButtonColor = rightButton.GetComponent<Image>().color;
+            rightButtonColor.a = 0f;
+            rightButton.GetComponent<Image>().color = rightButtonColor;
+
+            rightButton.GetComponentInChildren<Text>().gameObject.SetActive(false);
         }
 
-        if(gameReady && !StoryGameController.reachedScore)
+        if (gameReady && !StoryGameController.reachedScore)
         {
             spawnTimer += Time.deltaTime;
             if (spawnTimer >= spawnRate)

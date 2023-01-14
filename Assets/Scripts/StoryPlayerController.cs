@@ -1,6 +1,3 @@
-using Cinemachine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,11 +5,11 @@ using UnityEngine.UI;
 public class StoryPlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
-    public GameObject camera;
     public GameObject cinemachineCamera;
     public GameObject gameoverPanel;
     public GameObject scorePanel;
     public GameObject commandsPanel;
+    public GameObject victoryPanel;
     public SpriteRenderer spriteRender;
     public Animator animator;
     public Sprite[] spriteArray;
@@ -71,9 +68,9 @@ public class StoryPlayerController : MonoBehaviour
         if (StoryGameController.reachedScore)
         {
             cinemachineCamera.SetActive(true);
-            if (transform.position.y > -23.75f && camera.transform.position.y >= -23.75f)
+            if (transform.position.y > -23.75f && cinemachineCamera.transform.position.y >= -23.75f)
             {
-                transform.position = new Vector2(transform.position.x,
+                transform.position = new Vector2(0f,
                 transform.position.y - 3f * Time.deltaTime);
             }
             else
@@ -84,7 +81,7 @@ public class StoryPlayerController : MonoBehaviour
         }
 
         #if UNITY_EDITOR
-                rb.velocity = new Vector2(Input.GetAxis("Horizontal") * 6f, rb.velocity.y);
+            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * 6f, rb.velocity.y);
         #endif
     }
 
@@ -103,7 +100,8 @@ public class StoryPlayerController : MonoBehaviour
 
         if (collision.gameObject.tag == "cup")
         {
-            SceneManager.LoadScene(0);
+            Time.timeScale = 0;
+            victoryPanel.SetActive(true);
         }
     }
 }
