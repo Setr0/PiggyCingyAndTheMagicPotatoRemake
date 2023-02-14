@@ -10,3 +10,5 @@
 <ul>
   <li>Unity version <a href="unityhub://2020.3.42f1/7ade1201f527">2020.3.42f1</a></li>
 </ul>
+
+<p>Keystore's password: <code>123456</code></p>
